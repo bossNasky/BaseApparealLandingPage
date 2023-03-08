@@ -1,10 +1,40 @@
 import "./../css/style.css";
 
-const authorElement = document.querySelector(".author");
-const shareButton = document.querySelector(".btn--share");
+const emailValidator = function () {
+  const form = document.querySelector(".newsletter");
+  const emailInput = document.querySelector(".newsletter__input");
+  const formError = document.querySelector(".form-error");
 
-const toggleShare = function () {
-  authorElement?.classList.toggle("show");
+  const emailValidation = function (email) {
+    const validEmail =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    return email.match(validEmail);
+  };
+
+  const successSendEmail = function () {
+    form?.classList.remove("error");
+    emailInput.value = "";
+  };
+
+  const showError = function (message) {
+    formError.textContent = message;
+    form?.classList.add("error");
+  };
+
+  form?.addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    const email = emailInput.value;
+
+    if (!email) {
+      return showError("Input can't be empty.");
+    }
+
+    if (!emailValidation(email)) {
+      return showError("Input is invalid.");
+    }
+
+    successSendEmail();
+  });
 };
 
-shareButton?.addEventListener("click", toggleShare);
+emailValidator();
