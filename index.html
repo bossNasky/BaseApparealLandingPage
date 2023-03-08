@@ -13,7 +13,63 @@
     />
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <main class="main">
+        <div class="hero">
+          <div class="hero__content">
+            <div class="logo-container">
+              <a href="#" class="logo">
+                <img
+                  src="./src/images/logo.svg"
+                  alt="Base Appareal"
+                  class="logo-image"
+                />
+              </a>
+            </div>
+            <div class="hero__mobile-image">
+              <img src="./src/images/hero-mobile.jpg" alt="Woman" />
+            </div>
+            <div class="typography">
+              <h1 class="heading__primary">
+                <span>We're</span>
+                coming soon
+              </h1>
+              <p class="description">
+                Hello fellow shoppers! We're currently building our new fashion
+                store. Add your email below to stay up-to-date with
+                announcements and our launch deals.
+              </p>
+            </div>
+            <form class="newsletter">
+              <div class="newsletter__item">
+                <input
+                  type="text"
+                  placeholder="Email Address"
+                  class="newsletter__input"
+                />
+                <button type="submit" class="btn btn--submit">
+                  <div class="sr-only">Send form</div>
+                  <img src="./src/images/icon-arrow.svg" alt="" />
+                </button>
+                <img
+                  src="./src/images/icon-error.svg"
+                  alt=""
+                  class="error-image"
+                />
+                <p class="error">Something wrong!</p>
+              </div>
+            </form>
+          </div>
+          <div class="hero__background">
+            <img
+              src="./src/images/hero-desktop.jpg"
+              alt="Woman"
+              class="hero__image"
+            />
+          </div>
+        </div>
+      </main>
+    </div>
     <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
