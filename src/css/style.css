@@ -1,0 +1,22 @@
+:root {
+  --clr-primary-400: hsl(0, 36%, 70%);
+  --clr-primary-300: hsl(0, 93%, 68%);
+  --clr-neutral-400: hsl(0, 6%, 24%);
+  --clr-gradient-400: hsl(0, 0%, 100%);
+  --clr-gradient-300: hsl(0, 100%, 98%);
+  --clr-gradient-200: hsl(0, 80%, 86%);
+  --clr-gradient-100: hsl(0, 74%, 74%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+}
